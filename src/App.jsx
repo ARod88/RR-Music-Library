@@ -26,7 +26,7 @@ function App() {
       } else {
         setMessage("No results found!")
       }
-    })
+    }).catch(err => console.log(err))
   }
 
   return (
@@ -45,7 +45,7 @@ function App() {
       </SearchContext.Provider>
       </Fragment>
           }>
-            
+
           </Route>
           <Route path='/album/:id' element={<AlbumView/>} />
           <Route path='/artist/:id' element={<ArtistView />} />
